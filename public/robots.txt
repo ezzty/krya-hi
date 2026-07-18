@@ -1,7 +1,7 @@
-# robots.txt for krya (hi.krya.com)
+# robots.txt for krya (in.krya.com)
 
 User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://hi.krya.com/sitemap.xml
+Sitemap: https://in.krya.com/sitemap.xml
