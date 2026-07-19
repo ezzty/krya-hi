@@ -160,11 +160,16 @@ export function stripMarkdown(content: string): string {
 // 计算字数
 export function countWords(content: string): number {
   const plainText = stripMarkdown(content);
+  // 中文字符
   const chineseChars = plainText.match(/[\u4e00-\u9fa5]/g);
   const chineseCount = chineseChars ? chineseChars.length : 0;
+  // 英文单词
   const englishWords = plainText.match(/[a-zA-Z0-9]+/g);
   const englishCount = englishWords ? englishWords.length : 0;
-  return chineseCount + englishCount;
+  // Devanagari (Hindi) 字符
+  const devanagariChars = plainText.match(/[\u0900-\u097F]/g);
+  const devanagariCount = devanagariChars ? devanagariChars.length : 0;
+  return chineseCount + englishCount + devanagariCount;
 }
 
 // 格式化文章列表
