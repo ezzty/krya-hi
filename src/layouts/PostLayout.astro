@@ -17,8 +17,8 @@ interface Props {
 const { title, description, author, pubDate, wordCount = 0, tags = [], categories = [], thumbnail } = Astro.props;
 
 // Process og:image URL (fallback to site default)
-const ogImage = thumbnail || 'https://en.krya.com/og-image.png';
-const isDefaultOg = ogImage === 'https://en.krya.com/og-image.png';
+const ogImage = thumbnail || 'https://in.krya.com/og-image.png';
+const isDefaultOg = ogImage === 'https://in.krya.com/og-image.png';
 ---
 
 <BaseLayout
